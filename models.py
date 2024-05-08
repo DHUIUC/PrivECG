@@ -2,7 +2,7 @@ import torch
 from torch.nn.functional import relu, max_pool1d, sigmoid, log_softmax
 import torch.nn as nn
 
-device='cuda:1'
+device='cuda:0'
 #----------------#
 #   Generator    #
 #----------------#
@@ -175,3 +175,4 @@ class Discriminator(nn.Module):
         x = self.flatten_3(x)
         x = torch.squeeze(x)
         return x
+
